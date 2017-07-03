@@ -117,7 +117,7 @@ type pipe struct {
 func newPipe() *pipe {
 	return &pipe{
 		x:        800,
-		h:        100 + int32(rand.Intn(300)),
+		h:        100 + int32(rand.Intn(270)),
 		w:        50,
 		inverted: rand.Float32() > 0.5,
 	}

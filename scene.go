@@ -82,7 +82,7 @@ func (s *scene) handleEvent(event sdl.Event) bool {
 	switch event.(type) {
 	case *sdl.QuitEvent:
 		return true
-	case *sdl.MouseButtonEvent:
+	case *sdl.MouseButtonEvent, *sdl.KeyUpEvent, *sdl.KeyDownEvent, *sdl.TextInputEvent:
 		s.bird.jump()
 	case *sdl.MouseMotionEvent, *sdl.WindowEvent, *sdl.TouchFingerEvent, *sdl.CommonEvent:
 	default:
